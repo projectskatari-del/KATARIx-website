@@ -4,7 +4,7 @@
 // In development, it points to localhost. For production, replace with your Render backend URL.
 const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://localhost:5000/api'
-    : 'https://katarix-backend.onrender.com/api'; // Update this with your Render URL when deployed
+    : 'https://katarix-website.onrender.com/api'; // Update this with your Render URL when deployed
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
