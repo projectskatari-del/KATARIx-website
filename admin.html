@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KATARIx | Admin Inquiry Dashboard</title>
+    <meta name="description" content="Secure administrative panel to review client submissions and database records.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="main-header">
+        <div class="container">
+            <a href="index.html" class="logo" id="nav-logo">
+                <img src="assets/KATARIx logo-02 png.png" alt="KATARIx Logo">
+                <span class="logo-text">KATARI<span class="gradient-text">x</span></span>
+            </a>
+            <nav>
+                <ul class="nav-links" id="navigation-menu">
+                    <li><a href="index.html" id="nav-link-home">Home</a></li>
+                    <li><a href="services.html" id="nav-link-services">Services</a></li>
+                    <li><a href="about.html" id="nav-link-about">About Us</a></li>
+                    <li><a href="contact.html" id="nav-link-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger" id="mobile-menu-burger" aria-label="Toggle navigation menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </header>
+
+    <main id="admin-dashboard">
+        <section class="container" style="padding-top: 10rem;">
+            
+            <!-- 1. Passcode Authentication Section -->
+            <div class="glass-panel passcode-container" id="passcode-section">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; font-family: var(--font-heading);" class="gradient-text">Admin Portal</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.95rem;">Enter the administrative passcode to access the customer inquiries database.</p>
+                
+                <form id="passcode-form">
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <input type="password" id="admin-passcode" class="form-control" placeholder="••••••••" style="text-align: center;" required autocomplete="current-password">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" id="admin-login-btn">Authenticate</button>
+                </form>
+            </div>
+
+            <!-- 2. Main Dashboard Section (Hidden by Default) -->
+            <div id="dashboard-section" style="display: none;">
+                <div class="admin-header">
+                    <div>
+                        <h2 style="font-size: 2.2rem; font-family: var(--font-heading);" class="gradient-text">Customer Inquiries</h2>
+                        <p style="color: var(--text-secondary);">Real-time database records retrieved from Neon PostgreSQL.</p>
+                    </div>
+                    <button class="btn btn-secondary" id="logout-btn">Log Out</button>
+                </div>
+
+                <div class="glass-panel" style="padding: 2rem; margin-top: 2rem;">
+                    <div class="admin-table-container">
+                        <table class="admin-table" id="inquiries-table">
+                            <thead>
+                                <tr>
+                                    <th>Status</th>
+                                    <th>Client Details</th>
+                                    <th>Service Requested</th>
+                                    <th>Inquiry Message</th>
+                                    <th>Submitted At</th>
+                                </tr>
+                            </thead>
+                            <tbody id="inquiries-table-body">
+                                <!-- Dynamically populated via app.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo footer-logo">
+                        <img src="assets/KATARIx logo-02 png.png" alt="KATARIx Logo">
+                        <span class="logo-text">KATARI<span class="gradient-text">x</span></span>
+                    </div>
+                    <p class="footer-description">Custom software, high-performance apps, and enterprise computer services based out of Visakhapatnam, Andhra Pradesh.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" id="footer-link-home">Home</a></li>
+                        <li><a href="services.html" id="footer-link-services">Services</a></li>
+                        <li><a href="about.html" id="footer-link-about">About Us</a></li>
+                        <li><a href="contact.html" id="footer-link-contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html#software-development">Software Development</a></li>
+                        <li><a href="services.html#app-development">App Development</a></li>
+                        <li><a href="services.html#computer-services">IT & Networking Services</a></li>
+                        <li><a href="services.html#hardware-support">Hardware Provisioning</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 KATARIx. All Rights Reserved.</p>
+                <p>Designed with excellence for modern web exploration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
